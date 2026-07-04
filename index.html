@@ -60,7 +60,7 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 
 .app{position:relative;z-index:1}
 .section-container{max-width:1200px;margin:0 auto;padding:0 24px}
-section{position:relative;padding:100px 0}
+section{position:relative;padding:60px 0}
 
 .section-label{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:0.85rem;color:var(--accent-primary-light);text-transform:uppercase;letter-spacing:3px;margin-bottom:16px}
 .section-label::before{content:'';display:block;width:24px;height:1px;background:var(--accent-primary)}
@@ -93,14 +93,15 @@ section{position:relative;padding:100px 0}
 .hero-title{font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:400;color:var(--text-secondary);margin-bottom:12px;min-height:2em;opacity:0;animation:fadeInUp 0.8s ease 0.3s forwards}
 .hero-title .cursor{display:inline-block;width:2px;height:1.2em;background:var(--accent-primary);margin-left:2px;vertical-align:text-bottom;animation:blink 0.8s infinite}
 .hero-bio{font-size:1.05rem;color:var(--text-tertiary);max-width:550px;margin:0 auto 40px;line-height:1.7;opacity:0;animation:fadeInUp 0.8s ease 0.45s forwards}
-.hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeInUp 0.8s ease 0.6s forwards}
+.hero-actions{display:flex;flex-direction:column;align-items:center;gap:16px;opacity:0;animation:fadeInUp 0.8s ease 0.6s forwards}.hero-actions-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-size:0.95rem;font-weight:600;transition:all var(--transition-bounce);position:relative;overflow:hidden}
 .btn-primary{background:linear-gradient(135deg,var(--accent-primary),#7c3aed);color:white;box-shadow:0 4px 20px var(--accent-primary-glow)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--accent-primary-glow)}
 .btn-outline{background:transparent;color:var(--text-primary);border:1px solid var(--glass-border)}
 .btn-outline:hover{border-color:var(--accent-primary);background:rgba(139,92,246,0.1);transform:translateY(-2px)}
-.hero-scroll-indicator{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text-tertiary);font-size:0.8rem;opacity:0;animation:fadeInUp 0.8s ease 1s forwards}
+.hero-scroll-indicator{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text-tertiary);font-size:0.8rem;opacity:0;animation:fadeInUp 0.8s ease 1s forwards;margin-top:100px}
 .hero-scroll-indicator .mouse{width:26px;height:40px;border:2px solid var(--text-tertiary);border-radius:13px;position:relative}
+
 .hero-scroll-indicator .mouse::after{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:4px;height:8px;background:var(--accent-primary);border-radius:2px;animation:scrollWheel 1.5s ease infinite}
 .hero-shapes{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .hero-shape{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.15}
@@ -116,7 +117,7 @@ section{position:relative;padding:100px 0}
 .about-avatar-emoji{position:relative;z-index:1;filter:drop-shadow(0 0 20px rgba(139,92,246,0.3))}
 .about-text h3{font-size:1.8rem;font-weight:700;margin-bottom:20px}
 .about-text p{color:var(--text-secondary);line-height:1.8;margin-bottom:16px;font-size:1.02rem}
-.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px}
 .stat-item{text-align:center}
 .stat-number{font-size:2.2rem;font-weight:800;background:var(--gradient-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat-label{font-size:0.85rem;color:var(--text-tertiary);margin-top:4px}
@@ -134,6 +135,12 @@ section{position:relative;padding:100px 0}
 .timeline-card h3{font-size:1.3rem;font-weight:700;margin-bottom:6px}
 .timeline-card h4{font-size:0.95rem;color:var(--accent-primary-light);font-weight:500;margin-bottom:12px}
 .timeline-card p{color:var(--text-secondary);font-size:0.95rem;line-height:1.7}
+.exp-biz{margin-bottom:18px}
+.exp-biz strong{display:block;font-size:0.95rem;color:var(--accent-secondary-light);margin-bottom:8px;font-weight:600}
+.exp-biz ul{list-style:none;padding:0;margin:0}
+.exp-biz li{position:relative;padding-left:16px;margin-bottom:8px;color:var(--text-secondary);font-size:0.9rem;line-height:1.7}
+.exp-biz li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--accent-primary);opacity:0.5}
+.exp-biz li strong{display:inline;font-size:0.9rem;color:var(--text-primary);font-weight:600}
 .timeline-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .tag{font-size:0.75rem;padding:4px 12px;border-radius:50px;background:rgba(139,92,246,0.1);color:var(--accent-primary-light);border:1px solid rgba(139,92,246,0.2)}
 
@@ -152,6 +159,9 @@ section{position:relative;padding:100px 0}
 .project-links{display:flex;gap:12px;flex-wrap:wrap}
 .project-link{display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;font-weight:500;color:var(--accent-primary-light);padding:6px 16px;border-radius:50px;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);transition:all var(--transition-fast)}
 .project-link:hover{background:rgba(139,92,246,0.2);border-color:var(--accent-primary);color:var(--text-primary)}
+.project-source{margin-top:18px;padding-top:16px;border-top:1px solid var(--glass-border)}
+.source-link{padding:10px 22px;font-size:0.88rem;font-weight:600;background:linear-gradient(135deg,var(--accent-primary),#7c3aed);color:#fff;border:none;box-shadow:0 2px 12px var(--accent-primary-glow)}
+.source-link:hover{background:linear-gradient(135deg,#7c3aed,var(--accent-primary));color:#fff;transform:translateY(-2px);box-shadow:0 6px 20px var(--accent-primary-glow)}
 .project-glow{position:absolute;width:200px;height:200px;border-radius:50%;filter:blur(60px);opacity:0;transition:opacity var(--transition-smooth);pointer-events:none}
 .project-card:nth-child(3n+1) .project-glow{background:var(--accent-primary);top:-50px;right:-50px}
 .project-card:nth-child(3n+2) .project-glow{background:var(--accent-secondary);bottom:-50px;left:-50px}
@@ -190,6 +200,14 @@ input.form-input:focus,textarea.form-input:focus{outline:none;border-color:var(-
 textarea.form-input{min-height:120px}
 .form-submit{width:100%;padding:14px;background:linear-gradient(135deg,var(--accent-primary),#7c3aed);color:white;border-radius:50px;font-size:0.95rem;font-weight:600;transition:all var(--transition-bounce)}
 .form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--accent-primary-glow)}
+.toast-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;pointer-events:none;transition:opacity 0.3s ease}
+.toast-overlay.show{opacity:1;pointer-events:auto}
+.toast-box{background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:32px 40px;text-align:center;max-width:380px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.toast-icon{font-size:3rem;margin-bottom:12px;animation:fadeInUp 0.4s ease}
+.toast-title{font-size:1.2rem;font-weight:700;margin-bottom:8px;color:var(--text-primary)}
+.toast-msg{font-size:0.9rem;color:var(--text-secondary);margin-bottom:20px;line-height:1.5}
+.toast-close{padding:10px 32px;border-radius:50px;font-size:0.9rem;font-weight:600;background:linear-gradient(135deg,var(--accent-primary),#7c3aed);color:white;border:none;cursor:pointer;transition:all var(--transition-bounce)}
+.toast-close:hover{transform:translateY(-2px);box-shadow:0 6px 20px var(--accent-primary-glow)}
 
 /* Footer */
 .footer{text-align:center;padding:40px 0;border-top:1px solid var(--glass-border)}
@@ -237,7 +255,7 @@ textarea.form-input{min-height:120px}
       <ul class="nav-links" id="navLinks">
         <li><button class="nav-link" data-href="#about"><span class="nav-number">01.</span>关于我</button></li>
         <li><button class="nav-link" data-href="#education"><span class="nav-number">02.</span>教育</button></li>
-        <li><button class="nav-link" data-href="#experience"><span class="nav-number">03.</span>经历</button></li>
+        <li><button class="nav-link" data-href="#experience"><span class="nav-number">03.</span>实习</button></li>
         <li><button class="nav-link" data-href="#projects"><span class="nav-number">04.</span>项目</button></li>
         <li><button class="nav-link" data-href="#skills"><span class="nav-number">05.</span>技能</button></li>
         <li><button class="nav-link" data-href="#contact"><span class="nav-number">06.</span>联系</button></li>
@@ -253,36 +271,44 @@ textarea.form-input{min-height:120px}
       <div class="hero-shape shape-3"></div>
     </div>
     <div class="hero-content section-container">
-      <p class="hero-greeting">👋 你好，我是</p>
-      <h1 class="hero-name"><span class="highlight">Lumy</span></h1>
+      <p class="hero-greeting">Hello，我是</p>
+      <h1 class="hero-name"><span class="highlight">卢铭越</span></h1>
       <div class="hero-title"><span id="typewriter"></span><span class="cursor"></span></div>
-      <p class="hero-bio">热衷于构建优雅、高性能的 Web 应用。拥有 3 年前端和后端开发经验，专注于 React 生态与云原生技术栈。</p>
+      <p class="hero-bio">复旦大学数据科学-国经双学位在读。我携技术理性与商业视野深耕 AI 产品赛道，在学习、实习与个人项目落地实践中，持续探寻技术与用户需求共振的产品答案。</p>
       <div class="hero-actions">
-        <button class="btn btn-primary" onclick="scrollToSection('#projects')">查看项目</button>
-        <button class="btn btn-outline" onclick="scrollToSection('#contact')">联系我</button>
+        <div class="hero-actions-row">
+          <button class="btn btn-outline" onclick="scrollToSection('#about')">关于我</button>
+          <button class="btn btn-outline" onclick="scrollToSection('#education')">教育经历</button>
+          <button class="btn btn-outline" onclick="scrollToSection('#experience')">实习经历</button>
+          <button class="btn btn-outline" onclick="scrollToSection('#projects')">项目作品</button>
+          <button class="btn btn-outline" onclick="scrollToSection('#skills')">技能掌握</button>
+        </div>
+        <button class="btn btn-primary" onclick="scrollToSection('#contact')">联系我</button>
       </div>
-    </div>
-    <div class="hero-scroll-indicator">
-      <div class="mouse"></div>
-      <span>向下滚动</span>
+      <div class="hero-scroll-indicator">
+        <div class="mouse"></div>
+        <span>向下滚动</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:scrollBounce 1s ease infinite;margin-top:4px"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
     </div>
   </section>
 
   <!-- About -->
   <section id="about">
     <div class="section-container">
-      <div class="reveal"><span class="section-label">关于我</span><h2 class="section-title">让代码讲述故事</h2><p class="section-subtitle">我是一名充满热情的全栈开发者，致力于用技术创造价值。相信好的代码不仅能解决问题，更能带来愉悦的开发体验。</p></div>
+      <div class="reveal"><span class="section-label">关于我</span><h2 class="section-title">以AI赋能，寻产品答案</h2><p class="section-subtitle">我是一名兼具技术底色与商业视野的 AI 产品实践者，致力于从真实痛点出发打造有价值的产品。相信好的产品不止于解决问题，更能让技术真正触达用户与业务。</p></div>
       <div class="about-grid">
-        <div class="reveal-left"><div class="about-avatar-wrapper"><div class="about-avatar"><div class="about-avatar-glow"></div><span class="about-avatar-emoji">👨‍💻</span></div></div></div>
+        <div class="reveal-left"><div class="about-avatar-wrapper"><div class="about-avatar"><div class="about-avatar-glow"></div><img src="D:\lumy-photo.jpg" alt="Lumy" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;position:relative;z-index:1" /></div></div></div>
         <div class="reveal-right"><div class="about-text">
-          <h3>你好！我是 Lumy</h3>
-          <p>目前就读于清华大学计算机科学与技术专业，同时也是活跃的开源贡献者。我的技术栈覆盖前端、后端、云原生和 AI 领域，热衷于探索前沿技术并将其应用于实际项目。</p>
-          <p>在字节跳动、阿里巴巴和网易的实习经历让我积累了丰富的工程实践经验。我相信持续学习和知识分享是成长的关键，因此在工作之余也会撰写技术博客，在 GitHub 上维护开源项目。</p>
-          <p>工作之外，我喜欢摄影、旅行和探索城市中的独立咖啡馆。☕</p>
+          <h3>你好！我是卢铭越</h3>
+          <p>目前就读于复旦大学数据科学与大数据技术-国际经济与贸易双学位，热爱探索 AI+产品赛道，热衷于将前沿技术转化为可落地的业务解决方案。</p>
+          <p>在东方财富、上海透云物联网等企业的实习经历中，我沉淀了AI风控体系搭建、内容分发优化、生产系统数字化等多场景的产品全链路落地经验。我始终以产品价值为锚，从业务痛点出发，在需求 - 落地 - 迭代的闭环中持续打磨产品价值，让每一次产品设计都指向可落地的实效。</p>
+          <p>学习与工作之外，我乐于在项目中沉淀产品方法论，持续追踪 AI 与产品领域的前沿动态，探索人工智能工具的更多创新玩法；日常里健身、跑步与羽毛球是我的能量来源，摄影则是我观察世界的温柔方式。</p>
           <div class="about-stats">
-            <div class="stat-item"><div class="stat-number">3+</div><div class="stat-label">年工作经验</div></div>
-            <div class="stat-item"><div class="stat-number">20+</div><div class="stat-label">完成项目</div></div>
-            <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">技术认证</div></div>
+            <div class="stat-item"><div class="stat-number">4</div><div class="stat-label">段专业实习</div></div>
+            <div class="stat-item"><div class="stat-number">8+</div><div class="stat-label">落地产品项目</div></div>
+            <div class="stat-item"><div class="stat-number">3</div><div class="stat-label">项奖学金荣誉</div></div>
+            <div class="stat-item"><div class="stat-number">5+</div><div class="stat-label">科研/竞赛经历</div></div>
           </div>
         </div></div>
       </div>
@@ -292,10 +318,10 @@ textarea.form-input{min-height:120px}
   <!-- Education -->
   <section id="education">
     <div class="section-container">
-      <div class="reveal"><span class="section-label">教育经历</span><h2 class="section-title">学术背景</h2><p class="section-subtitle">扎实的计算机科学基础，结合前沿研究方向的深入探索。</p></div>
+      <div class="reveal"><span class="section-label">教育经历</span><h2 class="section-title">学术背景</h2><p class="section-subtitle">交叉学科双学位培养体系，兼具技术深度与商业视野的复合成长。</p></div>
       <div class="timeline">
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><span class="timeline-period">2023 - 2025</span><h3>清华大学</h3><h4>计算机科学与技术 · 硕士</h4><p>研究方向为分布式系统与云计算。GPA 3.9/4.0，获国家奖学金。参与实验室的 Serverless 平台项目，发表一篇 CCF-A 类论文。</p><div class="timeline-tags"><span class="tag">分布式系统</span><span class="tag">云计算</span><span class="tag">Serverless</span></div></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><span class="timeline-period">2019 - 2023</span><h3>浙江大学</h3><h4>软件工程 · 学士</h4><p>专业排名前 5%，获优秀毕业生称号。担任校 ACM 集训队副队长，带领团队获得 ICPC 亚洲区域赛银奖。</p><div class="timeline-tags"><span class="tag">数据结构</span><span class="tag">算法</span><span class="tag">软件工程</span></div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><span class="timeline-period">2024 - 2028</span><h3>复旦大学</h3><h4>数据科学与大数据技术 · 学士</h4><p>主修课程为人工智能、深度学习、数值算法、数据库 SQL、统计学与 R 应用，斩获2026年美国大学生数学建模竞赛（MCM/ICM）二等奖、2025年全国大学生数据分析科普竞赛一等奖。</p><div class="timeline-tags"><span class="tag">人工智能</span><span class="tag">统计</span><span class="tag">算法</span></div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><span class="timeline-period">2024 - 2028</span><h3>复旦大学</h3><h4>国际经济与贸易 · 学士</h4><p>主修课程为公司金融、产业经济学、计量/微观/宏观经济学，经济学院专业排名前 30%。学术上参与促消费政策效应实证研究、数字货币生态构建科研课题；实践中于上海交通大学主办的国际青年领袖金融高峰会主导量化策略产品化落地,在 ICC 国际万花筒创新挑战赛完成智慧固废循环贸易产品全链路方案设计。</p><div class="timeline-tags"><span class="tag">商业决策</span><span class="tag">实证研究</span><span class="tag">金融产品</span></div></div></div>
       </div>
     </div>
   </section>
@@ -303,11 +329,11 @@ textarea.form-input{min-height:120px}
   <!-- Experience -->
   <section id="experience">
     <div class="section-container">
-      <div class="reveal"><span class="section-label">实习经历</span><h2 class="section-title">工作实践</h2><p class="section-subtitle">在顶级互联网公司的实习经历，让我将理论知识转化为工程能力。</p></div>
+      <div class="reveal"><span class="section-label">实习经历</span><h2 class="section-title">工作实践</h2><p class="section-subtitle">多行业多赛道产品实习沉淀，从 AI 风控、C 端内容分发到产业数字化，完整覆盖需求研判、方案设计到落地迭代的全链路产品能力。</p></div>
       <div class="timeline">
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><span class="timeline-period">2024.06 - 2024.09</span><h3>字节跳动</h3><h4>前端开发工程师 · 实习</h4><p>参与抖音电商后台管理系统的前端开发，负责商品管理模块的重构。使用 React + TypeScript + GraphQL 技术栈，将页面加载性能提升了 40%。设计并实现了可复用的表格组件库，被团队 3 个以上项目采用。</p><div class="timeline-tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">GraphQL</span><span class="tag">性能优化</span></div></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><span class="timeline-period">2023.07 - 2023.09</span><h3>阿里巴巴</h3><h4>软件开发工程师 · 实习</h4><p>在阿里云智能事业群实习，参与云监控平台的告警系统开发。使用 Go 语言优化告警聚合算法，将告警延迟从 30s 降低到 5s 以内。编写了自动化测试框架，将模块测试覆盖率从 60% 提升至 92%。</p><div class="timeline-tags"><span class="tag">Go</span><span class="tag">微服务</span><span class="tag">自动化测试</span><span class="tag">监控系统</span></div></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><span class="timeline-period">2022.12 - 2023.04</span><h3>网易</h3><h4>前端开发实习生</h4><p>负责网易云音乐 Web 端播放器模块的迭代开发。使用 React Hooks + Redux 重构了播放列表状态管理，解决了多端同步播放状态的技术难题。实现了歌词滚动、音效可视化等交互功能。</p><div class="timeline-tags"><span class="tag">React</span><span class="tag">Redux</span><span class="tag">Web Audio API</span><span class="tag">Canvas</span></div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><span class="timeline-period">2026.03 至今</span><h3>东方财富信息股份有限公司（300059）</h3><h4>产品部实习生</h4><div class="exp-biz"><strong>业务一：企微社群风控体系建设 — 黑名单检测系统与群聊 AI 监控</strong><ul><li><strong>痛点研判：</strong>客户群内第三方带货引流、私下荐股导流频发，原有纯关键词风控规则覆盖有限；经数据拆解，隐晦导流类违规召回率不足 40%，违规用户换群复犯率较高</li><li><strong>策略设计：</strong>搭建「规则引擎 + AI 大模型意图识别」双层风控架构，AI 层覆盖语义、上下文、行为时序、团伙关联四维识别，设计三级风险分级；配套跨群黑名单联动拦截机制</li><li><strong>产品落地：</strong>搭建准实时告警通道与监控后台，支持违规详情展示与一键处置；新增运营反馈回流机制，处置结果反哺模型训练，实现识别能力自迭代</li><li><strong>落地成果：</strong>隐蔽违规识别召回率提升至 86%，风控误判率下降 62%，违规用户跨群复犯率降低 71%</li></ul></div><div class="exp-biz"><strong>业务二：资讯列表关注栏目 AB 测试与内容分发策略优化</strong><ul><li><strong>数据洞察：</strong>下钻用户行为数据发现，关注关联内容点击率较泛推荐内容高 42%，但原有资讯频道无独立关注入口，内容未基于用户关系分层，消费效率与粘性提升空间显著</li><li><strong>策略设计：</strong>设计资讯栏目 AB 测试方案，拆分推荐对照组与关注实验组，采用版本号 + 接口标识位双控机制保障多实验流量互斥；搭建「关注池 + 兜底池」双层内容召回架构，配套精华帖过滤、内容去重与时间倒序排序规则</li><li><strong>协同落地：</strong>联动前后端研发对齐接口传参与图文展示标准，统一资讯瀑布流交互体验；规划全链路埋点体系，覆盖内容类型、曝光位置与转化节点，支撑实验数据回收与归因</li><li><strong>业务成效：</strong>实验组人均内容浏览量提升 18%，栏目人均停留时长提升 22%；内容空窗场景用户流失率下降 15%，实验结论支撑关注栏目全量上线，沉淀内容分发实验方法论</li></ul></div><div class="timeline-tags"><span class="tag">AI 风控</span><span class="tag">内容分发</span><span class="tag">AB 测试</span><span class="tag">策略产品</span></div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><span class="timeline-period">2025.12 - 2026.02</span><h3>上海透云物联网科技有限公司（HK1332）</h3><h4>数字化产品经理实习生</h4><div class="exp-biz"><strong>业务一：千鑫汽配 MES 数字化系统产品设计与落地</strong><ul><li><strong>业务调研与规划：</strong>深度调研企业生产全链路业务痛点，梳理进销存、计划排产、车间执行完整业务流程，输出系统整体业务蓝图，明确产品分层框架与核心落地目标</li><li><strong>产品功能设计：</strong>主导核心功能模块的产品设计，输出产品原型与 PRD 文档，拆解基础数据管理、生产工单、数据报表等核心场景，标准化业务流程与核心数据规则</li><li><strong>协同落地：</strong>联动技术团队对齐产品需求与实现逻辑，跟进项目部署、测试与用户培训全流程，保障项目按期验收，实现生产流程线上化与运营数据可视化</li></ul></div><div class="timeline-tags"><span class="tag">产业数字化</span><span class="tag">需求调研</span><span class="tag">MES 系统</span><span class="tag">PRD 输出</span></div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-card"><span class="timeline-period">2025.09 - 2026.01</span><h3>爱无止境科技有限公司</h3><h4>AI 玩具产品经理助理</h4><div class="exp-biz"><strong>业务一："小猪熊" 智能玩具 AI 语音交互产品落地</strong><ul><li><strong>需求拆解：</strong>拆解儿童陪伴、问答点播等语音交互场景，协同研发完成接口联调与模型调优；对接央视 IP 方，规范正版人设与内容边界</li><li><strong>方案输出：</strong>完成竞品调研与差异化定位，输出交互产品原型；撰写融资技术方案，梳理 AI 架构与商业化路径</li><li><strong>迭代落地：</strong>统筹家庭灰度内测，基于识别准确率等反馈推动迭代；跟进全周期落地，儿童场景语音识别准确率达 92%</li></ul></div><div class="timeline-tags"><span class="tag">AI 语音交互</span><span class="tag">智能硬件</span><span class="tag">用户研究</span><span class="tag">迭代优化</span></div></div></div>
       </div>
     </div>
   </section>
@@ -316,58 +342,28 @@ textarea.form-input{min-height:120px}
   <section id="projects">
     <div class="section-container">
       <div class="reveal"><span class="section-label">项目经历</span><h2 class="section-title">我的作品</h2><p class="section-subtitle">每个项目都是一次学习和成长的机会。从全栈应用到 AI 工具，我享受将想法变为现实的过程。</p></div>
-      <div class="reveal" style="transition-delay:0.15s"><div class="projects-filter">
-        <button class="filter-btn active" data-filter="all">全部</button>
-        <button class="filter-btn" data-filter="fullstack">全栈项目</button>
-        <button class="filter-btn" data-filter="ai">AI / ML</button>
-        <button class="filter-btn" data-filter="tool">工具</button>
-      </div></div>
       <div class="projects-grid" id="projectsGrid">
-        <div class="project-card" data-category="fullstack"><div class="project-glow"></div><div class="project-card-inner"><div class="project-icon">💻</div><h3>CloudIDE - 在线代码编辑器</h3><p>基于 Monaco Editor 的在线 IDE，支持多语言语法高亮、代码补全、实时协作编辑。后端使用 WebSocket 实现多人协同，Docker 容器提供隔离的代码运行环境。</p><div class="timeline-tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">WebSocket</span><span class="tag">Docker</span><span class="tag">Monaco Editor</span></div><div class="project-links" style="margin-top:14px"><a href="#" class="project-link">📂 源代码</a><a href="#" class="project-link">🔗 在线演示</a></div></div></div>
-        <div class="project-card" data-category="fullstack"><div class="project-glow"></div><div class="project-card-inner"><div class="project-icon">📋</div><h3>TaskFlow - 项目管理工具</h3><p>类 Notion 的项目管理工具，支持看板、列表、日历多种视图。实现了拖拽排序、富文本编辑、团队协作等功能。后端采用微服务架构，支持水平扩展。</p><div class="timeline-tags"><span class="tag">Next.js</span><span class="tag">Prisma</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">tRPC</span></div><div class="project-links" style="margin-top:14px"><a href="#" class="project-link">📂 源代码</a><a href="#" class="project-link">🔗 在线演示</a></div></div></div>
-        <div class="project-card" data-category="ai"><div class="project-glow"></div><div class="project-card-inner"><div class="project-icon">🎨</div><h3>AI Image Studio</h3><p>基于 Stable Diffusion 的 AI 图像生成平台。支持文生图、图生图、图像修复等功能。前端实现了 Prompt 编辑器、图片画廊、批量生成等交互。</p><div class="timeline-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Stable Diffusion</span><span class="tag">Celery</span></div><div class="project-links" style="margin-top:14px"><a href="#" class="project-link">📂 源代码</a></div></div></div>
-        <div class="project-card" data-category="tool"><div class="project-glow"></div><div class="project-card-inner"><div class="project-icon">📊</div><h3>DevMetrics - 开发效率分析</h3><p>自动分析 Git 仓库的代码提交、PR、Code Review 数据，生成开发者效率报告。支持团队维度对比、趋势分析、代码质量评分。</p><div class="timeline-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">React</span><span class="tag">D3.js</span><span class="tag">GitHub API</span></div><div class="project-links" style="margin-top:14px"><a href="#" class="project-link">📂 源代码</a></div></div></div>
-        <div class="project-card" data-category="fullstack"><div class="project-glow"></div><div class="project-card-inner"><div class="project-icon">💬</div><h3>QuickChat - 实时聊天应用</h3><p>支持端到端加密的实时聊天应用。实现了消息已读回执、在线状态、文件传输、表情回复等功能。使用 WebRTC 实现音视频通话。</p><div class="timeline-tags"><span class="tag">React Native</span><span class="tag">Socket.io</span><span class="tag">WebRTC</span><span class="tag">MongoDB</span><span class="tag">JWT</span></div><div class="project-links" style="margin-top:14px"><a href="#" class="project-link">📂 源代码</a></div></div></div>
-        <div class="project-card" data-category="ai"><div class="project-glow"></div><div class="project-card-inner"><div class="project-icon">🖼️</div><h3>StyleTransfer.js</h3><p>基于 TensorFlow.js 的浏览器端风格迁移库。无需后端，直接在浏览器中使用 GPU 加速完成图像风格迁移。提供简洁 API 和多种预训练模型。</p><div class="timeline-tags"><span class="tag">TensorFlow.js</span><span class="tag">WebGL</span><span class="tag">TypeScript</span><span class="tag">Canvas API</span></div><div class="project-links" style="margin-top:14px"><a href="#" class="project-link">📂 源代码</a></div></div></div>
+        <div class="project-card"><div class="project-glow"></div><div class="project-card-inner"><div class="project-icon">🎬</div><h3>电影行业数据库系统</h3><p>面向课程设计的电影行业数据库项目，基于 Flask + MySQL 构建，包含电影、演员、导演、出品公司等多维度数据管理。支持 Douban、OMDb、TMDb 外部数据采集导入，实现登录注册、评分评论、多维度检索等完整功能。</p><div class="timeline-tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">MySQL</span><span class="tag">爬虫</span><span class="tag">数据可视化</span></div><div class="project-source"><a href="https://github.com/cthunnn/movie_db-main" target="_blank" rel="noopener noreferrer" class="project-link source-link">📂 查看源代码</a></div></div></div>
+        <div class="project-card"><div class="project-glow"></div><div class="project-card-inner"><div class="project-icon">🦞</div><h3>DuePal 赶搭子 — 腾讯 AI 产品方案</h3><p>腾讯 AI 产品训练营作品，基于 QClaw 平台的多智能体单聊/群聊学习搭子系统。从「发现作业」到「提交作业」全程陪伴，包含完整产品方案文档、交互 Demo、技术架构图、六位 Agent 的 System Prompt 与 Tools 配置。</p><div class="timeline-tags"><span class="tag">AI 产品设计</span><span class="tag">Multi-Agent</span><span class="tag">QClaw</span><span class="tag">交互 Demo</span></div><div class="project-source"><a href="https://github.com/cthunnn/Q-Claw_Creative-thought" target="_blank" rel="noopener noreferrer" class="project-link source-link">📂 查看源代码</a></div></div></div>
+        <div class="project-card"><div class="project-glow"></div><div class="project-card-inner"><div class="project-icon">🤖</div><h3>DeepSeek ReAct Agent 框架</h3><p>从零手写的 ReAct（Reasoning + Acting）模式 AI Agent 框架，实现 Thought → Action → Observation 完整推理循环。包含可扩展工具系统（计算器、天气、网页搜索）、短期/长期记忆管理、智能决策引擎，对接 DeepSeek V4 API 支持流式输出。</p><div class="timeline-tags"><span class="tag">Python</span><span class="tag">ReAct</span><span class="tag">LLM</span><span class="tag">Tool Calling</span><span class="tag">Memory</span></div><div class="project-source"><a href="https://github.com/cthunnn/Deepseek_LLM-Loop_Control-Tool_Calling-Memory" target="_blank" rel="noopener noreferrer" class="project-link source-link">📂 查看源代码</a></div></div></div>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
+  <!-- Skills -->
   <section id="skills">
     <div class="section-container">
-      <div class="reveal"><span class="section-label">技能掌握</span><h2 class="section-title">技术栈</h2><p class="section-subtitle">不断拓展技术边界，保持对新技术的好奇心和学习热情。</p></div>
+      <div class="reveal"><span class="section-label">技能掌握</span><h2 class="section-title">能力图谱</h2><p class="section-subtitle">多学科交叉背景，技术工具与产品思维并重。</p></div>
       <div class="skills-grid" id="skillsGrid">
-        <div class="skill-category"><h3><span class="skill-category-icon">🎯</span>前端开发</h3><div class="skill-bars">
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">React / Next.js</span><span class="skill-bar-level">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.95"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">TypeScript</span><span class="skill-bar-level">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.90"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">Vue.js</span><span class="skill-bar-level">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.80"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">CSS / Tailwind</span><span class="skill-bar-level">92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.92"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">Three.js / D3.js</span><span class="skill-bar-level">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.70"></div></div></div>
-        </div></div>
-        <div class="skill-category"><h3><span class="skill-category-icon">⚙️</span>后端开发</h3><div class="skill-bars">
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">Node.js / Express</span><span class="skill-bar-level">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.88"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">Python / FastAPI</span><span class="skill-bar-level">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.82"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">Go</span><span class="skill-bar-level">65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.65"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">PostgreSQL / MongoDB</span><span class="skill-bar-level">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.85"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">GraphQL / tRPC</span><span class="skill-bar-level">78%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.78"></div></div></div>
-        </div></div>
-        <div class="skill-category"><h3><span class="skill-category-icon">🛠️</span>DevOps & 工具</h3><div class="skill-bars">
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">Docker / K8s</span><span class="skill-bar-level">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.75"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">AWS / 阿里云</span><span class="skill-bar-level">72%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.72"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">CI/CD (GitHub Actions)</span><span class="skill-bar-level">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.85"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">Linux / Shell</span><span class="skill-bar-level">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.80"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">Git / 代码审查</span><span class="skill-bar-level">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.90"></div></div></div>
-        </div></div>
-        <div class="skill-category"><h3><span class="skill-category-icon">🤖</span>AI & 数据</h3><div class="skill-bars">
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">TensorFlow / PyTorch</span><span class="skill-bar-level">68%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.68"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">LangChain</span><span class="skill-bar-level">72%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.72"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">Pandas / NumPy</span><span class="skill-bar-level">78%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.78"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">Prompt Engineering</span><span class="skill-bar-level">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.82"></div></div></div>
-        </div></div>
+        <div class="skill-category"><h3><span class="skill-category-icon">💻</span>编程技能</h3><p style="color:var(--text-secondary);line-height:1.8;font-size:0.95rem;margin-top:4px">掌握 SQL、Python、C 等语言和 Openclaw、Codex、Claude 等工具，在 GitHub 上拥有多个独立项目。</p></div>
+        <div class="skill-category"><h3><span class="skill-category-icon">🎨</span>软件技能</h3><p style="color:var(--text-secondary);line-height:1.8;font-size:0.95rem;margin-top:4px">掌握全套 Office 和 Axure、Figma 等产品类工具，精通微信推送和运营、海报制作、剪辑视频相关软件。</p></div>
+        <div class="skill-category"><h3><span class="skill-category-icon">🌐</span>语言能力</h3><p style="color:var(--text-secondary);line-height:1.8;font-size:0.95rem;margin-top:4px">英语 CET-4：612 分、CET-6：465 分，掌握阅读英文文献与英文日常交流能力。</p></div>
       </div>
     </div>
   </section>
+
+  <!-- Contact -->
 
   <!-- Contact -->
   <section id="contact">
@@ -378,16 +374,16 @@ textarea.form-input{min-height:120px}
           <h3>来聊聊吧</h3>
           <p>我始终对新的机会和合作保持开放态度。无论是技术讨论、项目合作还是简单的交流，都很乐意收到你的消息。</p>
           <div class="contact-links">
-            <a href="mailto:lumy@example.com" class="contact-link-item"><span class="contact-link-icon">📧</span>lumy@example.com</a>
-            <a href="https://github.com/lumy" target="_blank" class="contact-link-item"><span class="contact-link-icon">💻</span>GitHub</a>
-            <a href="https://linkedin.com/in/lumy" target="_blank" class="contact-link-item"><span class="contact-link-icon">🔗</span>LinkedIn</a>
-            <div class="contact-link-item"><span class="contact-link-icon">📍</span>北京, 中国</div>
+            <a href="lumy24@m.fudan.edu.cn" class="contact-link-item"><span class="contact-link-icon">📧</span>lumy24@m.fudan.edu.cn</a>
+            <a href="https://github.com/cthunnn" target="_blank" class="contact-link-item"><span class="contact-link-icon">💻</span>GitHub</a>
+            <a href="https://www.linkedin.com/in/%E9%93%AD%E8%B6%8A-%E5%8D%A2-4a7a0541b/" target="_blank" class="contact-link-item"><span class="contact-link-icon">🔗</span>LinkedIn（领英）</a>
+            <div class="contact-link-item"><span class="contact-link-icon">📍</span>上海, 中国</div>
           </div>
         </div></div>
-        <div class="reveal-right"><form class="contact-form" id="contactForm">
-          <div class="form-group"><label for="name">姓名</label><input type="text" id="name" class="form-input" placeholder="你的名字" required></div>
-          <div class="form-group"><label for="email">邮箱</label><input type="email" id="email" class="form-input" placeholder="your@email.com" required></div>
-          <div class="form-group"><label for="message">消息</label><textarea id="message" class="form-input" placeholder="说点什么..." required></textarea></div>
+        <div class="reveal-right"><form class="contact-form" id="contactForm" action="https://formspree.io/f/xojoybzw" method="POST">
+          <div class="form-group"><label for="name">姓名</label><input type="text" id="name" name="name" class="form-input" placeholder="你的名字" required></div>
+          <div class="form-group"><label for="email">邮箱</label><input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required></div>
+          <div class="form-group"><label for="message">消息</label><textarea id="message" name="message" class="form-input" placeholder="说点什么..." required></textarea></div>
           <button type="submit" class="form-submit" id="submitBtn">发送消息</button>
         </form></div>
       </div>
@@ -397,9 +393,8 @@ textarea.form-input{min-height:120px}
   <!-- Footer -->
   <footer class="footer">
     <div class="section-container">
-      <p>Designed & Built with <span class="heart">❤</span> by Lumy &copy; 2026</p>
-      <p style="margin-top:8px;font-size:0.8rem">使用 React + Vite 构建</p>
-    </div>
+      <p>Designed & Built by Lumy &copy; 2026</p>
+          </div>
   </footer>
 </div>
 
@@ -474,7 +469,7 @@ textarea.form-input{min-height:120px}
 
 // ===== Typewriter =====
 (function() {
-  const texts = ['全栈开发工程师', '开源爱好者', 'AI 探索者', '终身学习者'];
+  const texts = ['AI+产品践行者', '产技融合探索者', '产品价值探寻者', '终身学习者'];
   const el = document.getElementById('typewriter');
   let textIdx = 0, charIdx = 0, deleting = false, paused = false;
 
@@ -544,21 +539,7 @@ window.scrollToSection = function(href) {
   document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => observer.observe(el));
 })();
 
-// ===== Skills Bar Animation =====
-(function() {
-  let animated = false;
-  const grid = document.getElementById('skillsGrid');
-  const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !animated) {
-      animated = true;
-      grid.querySelectorAll('.skill-bar-fill').forEach((bar, i) => {
-        setTimeout(() => { bar.classList.add('animate'); bar.style.transform = `scaleX(${bar.style.getPropertyValue('--w')})`; }, i * 80);
-      });
-      observer.unobserve(grid);
-    }
-  }, { threshold: 0.15 });
-  if (grid) observer.observe(grid);
-})();
+
 
 // ===== Project Filter =====
 (function() {
@@ -595,16 +576,53 @@ window.scrollToSection = function(href) {
 // ===== Contact Form =====
 (function() {
   const form = document.getElementById('contactForm');
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = document.getElementById('submitBtn');
-    btn.textContent = '✅ 发送成功！';
-    setTimeout(() => { btn.textContent = '发送消息'; }, 3000);
-    form.reset();
+    btn.textContent = '⏳ 发送中...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        showToast('✅', '发送成功！', '你的留言已送达，我会尽快回复。');
+        form.reset();
+      } else {
+        showToast('❌', '发送失败', '服务器暂时无法处理，请稍后重试。');
+      }
+    } catch (err) {
+      showToast('🌐', '网络错误', '请检查网络连接后重试。');
+    }
+    btn.textContent = '发送消息';
+    btn.disabled = false;
   });
 })();
 
 // ===== Nav Link Click =====
+
+// ===== Toast Popup =====
+(function() {
+  var overlay = document.createElement('div');
+  overlay.className = 'toast-overlay';
+  overlay.innerHTML = '<div class="toast-box"><div class="toast-icon" id="toastIcon"></div><div class="toast-title" id="toastTitle"></div><div class="toast-msg" id="toastMsg"></div><button class="toast-close" id="toastClose">知道了</button></div>';
+  document.body.appendChild(overlay);
+  var closeBtn = document.getElementById('toastClose');
+  closeBtn.addEventListener('click', function() {
+    overlay.classList.remove('show');
+  });
+  window.showToast = function(icon, title, msg) {
+    document.getElementById('toastIcon').textContent = icon;
+    document.getElementById('toastTitle').textContent = title;
+    document.getElementById('toastMsg').textContent = msg;
+    overlay.classList.add('show');
+  };
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) overlay.classList.remove('show');
+  });
+})();
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
     scrollToSection(link.dataset.href);
